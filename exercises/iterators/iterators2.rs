@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: my code for learning
+ * @Author: chenggong Pan
+ * @Date: 2023-10-09 07:53:20
+ * @LastEditors: chenggong Pan
+ * @LastEditTime: 2023-10-11 17:29:42
+ */
 // iterators2.rs
 //
 // In this exercise, you'll learn some of the unique advantages that iterators
@@ -6,7 +13,6 @@
 // Execute `rustlings hint iterators2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 // Step 1.
 // Complete the `capitalize_first` function.
@@ -15,7 +21,7 @@ pub fn capitalize_first(input: &str) -> String {
     let mut c = input.chars();
     match c.next() {
         None => String::new(),
-        Some(first) => ???,
+        Some(first) => first.to_uppercase().collect::<String>() + c.as_str(),
     }
 }
 
@@ -24,7 +30,13 @@ pub fn capitalize_first(input: &str) -> String {
 // Return a vector of strings.
 // ["hello", "world"] -> ["Hello", "World"]
 pub fn capitalize_words_vector(words: &[&str]) -> Vec<String> {
-    vec![]
+    //vec![]
+  
+    let mut ve: Vec<String> = Vec::new();
+    for word in words {
+        ve.push(capitalize_first(word));
+    }
+    ve
 }
 
 // Step 3.
@@ -32,7 +44,12 @@ pub fn capitalize_words_vector(words: &[&str]) -> Vec<String> {
 // Return a single string.
 // ["hello", " ", "world"] -> "Hello World"
 pub fn capitalize_words_string(words: &[&str]) -> String {
-    String::new()
+    let mut s = String::new();
+
+    for word in words {
+        s.push_str(&capitalize_first(word));
+    }
+    s
 }
 
 #[cfg(test)]
