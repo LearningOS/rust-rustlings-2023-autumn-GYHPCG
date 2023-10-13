@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: my code for learning
+ * @Author: chenggong Pan
+ * @Date: 2023-10-09 07:53:20
+ * @LastEditors: chenggong Pan
+ * @LastEditTime: 2023-10-12 19:52:56
+ */
 // using_as.rs
 //
 // Type casting in Rust is done via the usage of the `as` operator. Please note
@@ -10,11 +17,9 @@
 // Execute `rustlings hint using_as` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 fn average(values: &[f64]) -> f64 {
     let total = values.iter().sum::<f64>();
-    total / values.len()
+    total / values.len() as f64
 }
 
 fn main() {
