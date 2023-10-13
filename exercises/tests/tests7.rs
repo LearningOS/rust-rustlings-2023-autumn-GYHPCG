@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: my code for learning
+ * @Author: chenggong Pan
+ * @Date: 2023-10-09 07:53:20
+ * @LastEditors: chenggong Pan
+ * @LastEditTime: 2023-10-13 18:06:29
+ */
 // tests7.rs
 //
 // When building packages, some dependencies can neither be imported in
@@ -33,8 +40,6 @@
 //
 // Execute `rustlings hint tests7` or use the `hint` watch subcommand for a
 // hint.
-
-// I AM NOT DONE
 
 fn main() {}
 

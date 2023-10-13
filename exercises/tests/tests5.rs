@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: my code for learning
+ * @Author: chenggong Pan
+ * @Date: 2023-10-09 07:53:20
+ * @LastEditors: chenggong Pan
+ * @LastEditTime: 2023-10-13 17:34:10
+ */
 // tests5.rs
 //
 // An `unsafe` in Rust serves as a contract.
@@ -22,8 +29,6 @@
 // Execute `rustlings hint tests5` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 /// # Safety
 ///
 /// The `address` must contain a mutable reference to a valid `u32` value.
@@ -32,7 +37,9 @@ unsafe fn modify_by_address(address: usize) {
     // code's behavior and the contract of this function. You may use the
     // comment of the test below as your format reference.
     unsafe {
-        todo!("Your code goes here")
+        //todo!("Your code goes here")
+        let tmp = &mut *(address as *mut u32);
+        *tmp = 0xAABBCCDD;
     }
 }
 

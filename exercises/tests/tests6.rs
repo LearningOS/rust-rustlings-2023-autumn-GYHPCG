@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: my code for learning
+ * @Author: chenggong Pan
+ * @Date: 2023-10-09 07:53:20
+ * @LastEditors: chenggong Pan
+ * @LastEditTime: 2023-10-13 17:40:40
+ */
 // tests6.rs
 //
 // In this example we take a shallow dive into the Rust standard library's
@@ -6,8 +13,6 @@
 //
 // Execute `rustlings hint tests6` or use the `hint` watch subcommand for a
 // hint.
-
-// I AM NOT DONE
 
 struct Foo {
     a: u128,
@@ -20,8 +25,10 @@ struct Foo {
 unsafe fn raw_pointer_to_box(ptr: *mut Foo) -> Box<Foo> {
     // SAFETY: The `ptr` contains an owned box of `Foo` by contract. We
     // simply reconstruct the box from that pointer.
-    let mut ret: Box<Foo> = unsafe { ??? };
-    todo!("The rest of the code goes here")
+    let mut ret: Box<Foo> = unsafe { Box::from_raw(ptr) };
+    //todo!("The rest of the code goes here")
+    ret.b = Some("hello".into());
+    ret
 }
 
 #[cfg(test)]
